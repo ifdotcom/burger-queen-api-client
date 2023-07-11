@@ -1,6 +1,7 @@
 // const http = "http://localhost:8080/";
 // const http = " https://f483-38-49-133-230.ngrok.io/";
-const http = "https://json-server-vercel-jade.vercel.app/";
+// const http = "https://json-server-vercel-jade.vercel.app/";
+const http = "https://burger-queen-api-mock-production-6473.up.railway.app/";
 
 const stringJSON = "application/json";
 
