@@ -1,6 +1,6 @@
 // const http = "http://localhost:8080/";
 // const http = " https://f483-38-49-133-230.ngrok.io/";
-const http = "https://virtserver.swaggerhub.com/ssinuco/BurgerQueenAPI/2.0.0/";
+const http = "https://json-server-vercel-jade.vercel.app/";
 
 const stringJSON = "application/json";
 
