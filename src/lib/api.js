@@ -1,4 +1,7 @@
-const http = "http://localhost:8080/";
+// const http = "http://localhost:8080/";
+// const http = " https://f483-38-49-133-230.ngrok.io/";
+const http = "https://virtserver.swaggerhub.com/ssinuco/BurgerQueenAPI/2.0.0/";
+
 const stringJSON = "application/json";
 
 export function getLogin(email, password) {
