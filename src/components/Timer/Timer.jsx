@@ -15,9 +15,9 @@ function Timer({ time }) {
       //   console.log(fechaAPI);
       //   console.log(`${diasTranscurridos}`);
       setElapsedTime(
-        `${diasTranscurridos} dias, ${horasTranscurridas % 24}:${
-          minutosTranscurridos % 60
-        }:${segundosTranscurridos % 60} hrs.`
+        `${horasTranscurridas % 24}:${minutosTranscurridos % 60}:${
+          segundosTranscurridos % 60
+        } hrs.`
       );
     }, 1000);
 

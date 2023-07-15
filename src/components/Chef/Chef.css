@@ -12,7 +12,7 @@
   background-color: rgba(237, 237, 237, 1);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  margin-bottom: 113px;
+  margin-bottom: 370px;
 }
 .columns {
   grid-area: name;
@@ -97,9 +97,41 @@ p {
 }
 .viewChef {
   display: inline-block;
-  height: 585px;
+  height: 481px;
 }
 .viewOrders {
   display: inline-block;
-  height: 460px;
+  height: 481px;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .containerTableOrder {
+    margin: 0 5px 291px;
+  }
+  .dataOrder > ul {
+    grid-template-columns: 10% 30% 65%;
+    margin-left: -15%;
+  }
+  .dataOrder > ul > li {
+    font-size: 18px;
+  }
+  #imgProduct {
+    width: 41px;
+    height: 41px;
+  }
+  #btnUpdate {
+    font-size: 14px;
+    height: 30px;
+    width: 100px;
+  }
+  .client {
+    margin-left: -20px;
+  }
+  .viewChef {
+    display: inline-block;
+    height: 291px;
+  }
+  .viewOrders {
+    display: inline-block;
+    height: 291px;
+  }
 }

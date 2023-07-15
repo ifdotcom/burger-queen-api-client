@@ -112,7 +112,7 @@ function Chef() {
                   <img
                     src={e.product.image}
                     alt='img product'
-                    style={{ width: "70px", height: "70px" }}
+                    id='imgProduct'
                   />
                   <li>{e.product.name}</li>
                 </ul>

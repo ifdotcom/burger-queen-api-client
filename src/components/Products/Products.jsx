@@ -66,7 +66,6 @@ function Products() {
     <>
       {showModalEditProduct && (
         <ModalEditProduct
-          id='modalEditProduct'
           onClose={toggleModalEdit}
           dataProduct={editingProduct}
           token={authorization}
@@ -82,7 +81,7 @@ function Products() {
       )}
       <Banner />
       <Header user={user} text='Administrador' />
-      <div className='containerButtons'>
+      <div className='containerButtonsProducts'>
         <div className='addUser'>
           <Button
             text='Trabajadores'
@@ -111,7 +110,6 @@ function Products() {
           <span>Almuerzo</span>
           <Input
             type='checkbox'
-            name='Almuerzo'
             id='toppingAlm'
             value='Almuerzo'
             checked={selectedTypes.includes("Almuerzo")}
@@ -132,12 +130,12 @@ function Products() {
 
       <div className='containerTable' data-testid='tableProducts'>
         <div className='columnsNames'>
-          <span className='id'>ID</span>
+          <span className='idP'>ID</span>
           <span className='email'>Nombre</span>
-          <span className='pwd'>Precio</span>
+          <span className='price'>Precio</span>
           <span className='role'>Imagen</span>
           <span className='action'>Tipo</span>
-          <span className='action'>Creación</span>
+          <span className='create'>Creación</span>
           <span className='action'>Opción</span>
         </div>
         <div className='containerIds'>
@@ -150,7 +148,7 @@ function Products() {
             .map((obj) => {
               return (
                 <ul key={obj.id}>
-                  <li>{obj.id}</li>
+                  <li className='idP'>{obj.id}</li>
                   <li>{obj.name}</li>
                   <li>{obj.price}</li>
                   <img
@@ -159,18 +157,20 @@ function Products() {
                     className='imageProduct'
                   />
                   <li>{obj.type}</li>
-                  <li>{obj.dateEntry}</li>
+                  <li className='create'>{obj.dateEntry}</li>
                   <div>
                     <div className='icon1'>
                       <AiOutlineEdit
-                        data-testid='checkEditProduct'
+                        className='editU'
                         size={30}
                         onClick={() => toggleModalEdit(obj)}
+                        data-testid='checkEditProduct'
                       />
                       <MdOutlineNoFood
-                        data-testid='deleteProduct'
+                        className='deleteU'
                         onClick={() => toggleModalDelete(obj.id)}
                         size={30}
+                        data-testid='deleteProduct'
                       />
                     </div>
                   </div>

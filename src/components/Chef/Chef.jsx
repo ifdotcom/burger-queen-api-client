@@ -84,6 +84,7 @@ function Chef() {
                 <ul key={order.id + "-" + e.product.id}>
                   <li>{e.qty}</li>
                   <img
+                    id='imgProduct'
                     src={e.product.image}
                     alt='img product'
                     style={{ width: "70px", height: "70px" }}

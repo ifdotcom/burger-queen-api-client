@@ -16,7 +16,9 @@ import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
 
 function Employees() {
-  const user = localStorage.getItem("userInLine");
+  const user = localStorage.getItem("user");
+  const userInLine = cutEmail(user);
+  localStorage.setItem("userInLine", userInLine);
   const token = localStorage.getItem("token");
   const authorization = `Bearer ${token}`;
   const [dataUser, setDataUser] = useState([]);
@@ -25,8 +27,8 @@ function Employees() {
   const [showModalEdit, setModalEdit] = useState(false);
   const [editingUser, setEdit] = useState();
   const [deleteUser, setDelete] = useState();
-  const [getEmployeesStatus, setGetEmployeesStatus] = useState("loading");
   const navigate = useNavigate();
+  const [getEmployeesStatus, setGetEmployeesStatus] = useState("loading");
 
   function goProducts() {
     return navigate("/admin/products");
@@ -74,21 +76,19 @@ function Employees() {
         />
       )}
       <Banner />
-      <Header user={user} text='Administrador' />
+      <Header user={userInLine} text='Administrador' />
 
-      <div className='containerButtons'>
+      <div className='containerButtonsE'>
         <div className='addUser' hidden={showModal} onClick={toggleModal}>
-          <AiOutlineUserAdd size={50} />
+          <AiOutlineUserAdd size={50} className='addU' />
           <span>Agregar Trabajador</span>
         </div>
-        <div className='addUser'>
-          <Button
-            id='btnProduct'
-            type='submit'
-            text='Productos'
-            onClick={goProducts}
-          />
-        </div>
+        <Button
+          id='btnProduct'
+          type='submit'
+          text='Productos'
+          onClick={goProducts}
+        />
       </div>
       {getEmployeesStatus === "loading" ? (
         <p data-testid='loadingEmployees'>Cargando...</p>
@@ -108,16 +108,18 @@ function Employees() {
                 <ul key={obj.id}>
                   <li>{obj.id}</li>
                   <li>{email}</li>
-                  <li>{"******"}</li>
+                  <li className='passWord'>{"******"}</li>
                   <li>{obj.role}</li>
                   <div>
                     <div className='icon1'>
                       <AiOutlineEdit
+                        className='editU'
                         size={30}
                         id='editModal'
                         onClick={() => toggleModalEdit(obj)}
                       />
                       <AiOutlineUserDelete
+                        className='deleteU'
                         onClick={() => toggleModalDelete(obj.id)}
                         id='deleteModal'
                         size={30}

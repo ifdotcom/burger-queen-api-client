@@ -15,3 +15,34 @@ footer {
   line-height: 150%;
   letter-spacing: 0.146em;
 }
+a {
+  color: black;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.146em;
+  margin-left: 5px;
+}
+a:active {
+  color: white;
+}
+a:visited {
+  color: black;
+}
+a:active {
+  color: white;
+}
+a:visited {
+  color: black;
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  footer {
+    height: 50px;
+    margin-top: 45.5%;
+    align-items: center;
+    position: relative;
+  }
+  footer > p {
+    font-size: 18px;
+    margin: 0px;
+  }
+}
