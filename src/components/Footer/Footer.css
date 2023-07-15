@@ -3,7 +3,7 @@ footer {
   display: flex;
   justify-content: center;
   align-self: flex-end;
-  position: absolute;
+  position: relative;
   bottom: 0;
   /* margin-top: 100px;  */
   width: 100%;
