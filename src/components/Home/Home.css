@@ -15,6 +15,7 @@
   margin-right: 20%;
   margin-left: 20%;
   max-width: 100%;
+  height: 50%;
 }
 .formLogin > form {
   display: flex;
